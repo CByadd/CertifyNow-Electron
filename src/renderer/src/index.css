@@ -1,0 +1,116 @@
+
+
+@font-face {
+  font-family: 'ae';
+  src: url('./styles/Fonts/Ae.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'As';
+  src: url('./styles/Fonts/aftersickdemo-regular.otf') format('otf');
+  /* font-weight: normal; */
+  /* font-style: normal; */
+}
+@font-face {
+  font-family: 'trap';
+  src: url('./styles/Fonts/Trap.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: trap;
+}
+
+:root {
+  --hblue: #00388a;
+  --g:#00A878;
+  --o:#F96900;
+
+}
+
+
+body{
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: lightseagreen;
+  overflow: hidden;
+}
+
+.logoholder {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  width: 158px;
+  height: 158px;
+  display: flex;
+  z-index: 5;
+  align-items: center;
+  justify-content: center;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  
+  /* Smoother shadow */
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3);
+  
+  /* Optimize performance */
+  will-change: transform;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+
+
+
+.logoholder::after{
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 20px;
+  box-shadow: -20px 0px 0px #fff;
+  left: 100%;
+  z-index: 1;
+  background: transparent;
+  top: 0;
+}
+.logoholder::before{
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 20px;
+  box-shadow: -20px 0px 0px #fff;
+  left: 0%;
+  z-index: 1;
+  background: transparent;
+  top: 100%;
+}
+
+.logoholder img{
+  height: 110%;
+}
+
+.logox{
+  width: 350px;
+  position: absolute;
+  top: 15%;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: none; /* Optional: Adjust border to match design */
+}
